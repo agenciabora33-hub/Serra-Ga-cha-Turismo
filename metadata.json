@@ -1,0 +1,7 @@
+{
+  "name": "Serra Gaúcha Turismo",
+  "description": "Site institucional e de conversão ultra-premium para transfer em Gramado e Canela e passeios na Serra Gaúcha.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
