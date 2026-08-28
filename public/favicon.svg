@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- Background with Brand Cyan/Teal -->
+  <rect width="512" height="512" rx="112" fill="#00A5BE"/>
+  
+  <!-- Outer Badge Circle -->
+  <circle cx="256" cy="200" r="130" fill="none" stroke="#FFFFFF" stroke-width="12" stroke-miterlimit="10"/>
+
+  <!-- Araucaria Trees Group -->
+  <g fill="#FFFFFF">
+    <!-- Center Left Tree Trunk -->
+    <path d="M228 175 h8 v42 h-8 z" opacity="0.95"/>
+    <!-- Center Main Tree Trunk -->
+    <path d="M252 165 h8 v52 h-8 z" opacity="0.95"/>
+    <!-- Center Right Tree Trunk -->
+    <path d="M276 172 h8 v45 h-8 z" opacity="0.95"/>
+    <!-- Far Left Tree Trunk -->
+    <path d="M206 182 h7 v35 h-7 z" opacity="0.95"/>
+    <!-- Far Right Tree Trunk -->
+    <path d="M298 185 h7 v32 h-7 z" opacity="0.95"/>
+
+    <!-- Araucaria Crown Tufts -->
+    <!-- Far Left -->
+    <ellipse cx="209" cy="180" rx="14" ry="7"/>
+    <ellipse cx="202" cy="174" rx="10" ry="6"/>
+    <ellipse cx="216" cy="174" rx="10" ry="6"/>
+
+    <!-- Mid Left -->
+    <ellipse cx="232" cy="168" rx="18" ry="9"/>
+    <ellipse cx="222" cy="160" rx="12" ry="7"/>
+    <ellipse cx="242" cy="160" rx="12" ry="7"/>
+    <ellipse cx="232" cy="154" rx="10" ry="6"/>
+
+    <!-- Center Tallest Tree -->
+    <ellipse cx="256" cy="152" rx="22" ry="10"/>
+    <ellipse cx="244" cy="142" rx="14" ry="8"/>
+    <ellipse cx="268" cy="142" rx="14" ry="8"/>
+    <ellipse cx="256" cy="134" rx="12" ry="7"/>
+
+    <!-- Mid Right -->
+    <ellipse cx="280" cy="165" rx="18" ry="9"/>
+    <ellipse cx="270" cy="158" rx="12" ry="7"/>
+    <ellipse cx="290" cy="158" rx="12" ry="7"/>
+    <ellipse cx="280" cy="152" rx="10" ry="6"/>
+
+    <!-- Far Right -->
+    <ellipse cx="301" cy="182" rx="14" ry="7"/>
+    <ellipse cx="294" cy="176" rx="10" ry="6"/>
+    <ellipse cx="308" cy="176" rx="10" ry="6"/>
+  </g>
+
+  <!-- Wavy Rolling Hills Lines inside and across Circle -->
+  <path d="M142 205 Q 190 190 235 212 T 330 205 T 370 215" fill="none" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/>
+  <path d="M132 232 Q 185 210 240 236 T 340 225 T 380 238" fill="none" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round"/>
+  <path d="M140 260 Q 200 235 256 262 T 355 250 T 372 265" fill="none" stroke="#FFFFFF" stroke-width="8.5" stroke-linecap="round"/>
+  <path d="M158 285 Q 215 260 265 285 T 350 280" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/>
+  <path d="M185 308 Q 230 290 275 308 T 325 304" fill="none" stroke="#FFFFFF" stroke-width="7.5" stroke-linecap="round"/>
+
+  <!-- Brand Typography -->
+  <text x="256" y="390" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="44" fill="#FFFFFF" letter-spacing="-0.5">Serra Gaúcha</text>
+  <text x="256" y="435" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="28" fill="#FFFFFF" letter-spacing="8">TURISMO</text>
+</svg>
