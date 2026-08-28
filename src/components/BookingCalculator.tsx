@@ -24,7 +24,6 @@ export const BookingCalculator: React.FC<BookingCalculatorProps> = ({ onOpenBook
   const [tripType, setTripType] = useState<'roundtrip' | 'oneway'>('roundtrip');
   const [origin, setOrigin] = useState('Aeroporto Salgado Filho (POA)');
   const [destination, setDestination] = useState('Gramado (Hotel / Pousada)');
-  const [serviceClass, setServiceClass] = useState<'privativo' | 'regular'>('privativo');
   const [passengers, setPassengers] = useState<number>(2);
   const [dateIn, setDateIn] = useState('');
   const [timeIn, setTimeIn] = useState('');
@@ -38,7 +37,6 @@ export const BookingCalculator: React.FC<BookingCalculatorProps> = ({ onOpenBook
       `📌 *Tipo de Viagem:* ${tripType === 'roundtrip' ? 'Ida e Volta (Transfer Completo)' : 'Apenas 1 Trecho'}\n` +
       `📍 *Origem:* ${origin}\n` +
       `🏁 *Destino:* ${destination}\n` +
-      `✨ *Modalidade:* ${serviceClass === 'privativo' ? 'Privativo VIP Exclusivo' : 'Regular Compartilhado'}\n` +
       `👥 *Passageiros:* ${passengers} pessoa(s)\n` +
       (dateIn ? `📅 *Data Chegada:* ${dateIn} ${timeIn ? `às ${timeIn}` : ''}\n` : '') +
       (tripType === 'roundtrip' && dateOut ? `📅 *Data Retorno:* ${dateOut}\n` : '') +
@@ -153,57 +151,24 @@ export const BookingCalculator: React.FC<BookingCalculatorProps> = ({ onOpenBook
                 </div>
               </div>
 
-              {/* Service Class & Passengers */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-xs font-semibold text-slate-300 mb-1.5 flex items-center gap-1.5">
-                    <Car className="w-3.5 h-3.5 text-[#DFCA95]" />
-                    Modalidade do Transfer
-                  </label>
-                  <div className="grid grid-cols-2 gap-2">
-                    <button
-                      type="button"
-                      onClick={() => setServiceClass('privativo')}
-                      className={`p-2.5 rounded-lg text-xs font-semibold border text-center transition-all ${
-                        serviceClass === 'privativo'
-                          ? 'bg-white border-white text-[#143D34] font-bold shadow-md'
-                          : 'bg-[#0D2B24]/90 border-white/10 text-slate-300'
-                      }`}
-                    >
-                      Privativo VIP (Exclusivo)
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => setServiceClass('regular')}
-                      className={`p-2.5 rounded-lg text-xs font-semibold border text-center transition-all ${
-                        serviceClass === 'regular'
-                          ? 'bg-white border-white text-[#143D34] font-bold shadow-md'
-                          : 'bg-[#0D2B24]/90 border-white/10 text-slate-300'
-                      }`}
-                    >
-                      Regular (Econômico)
-                    </button>
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-xs font-semibold text-slate-300 mb-1.5 flex items-center gap-1.5">
-                    <Users className="w-3.5 h-3.5 text-[#DFCA95]" />
-                    Quantidade de Passageiros
-                  </label>
-                  <div className="flex items-center gap-3">
-                    <input
-                      type="range"
-                      min="1"
-                      max="15"
-                      value={passengers}
-                      onChange={(e) => setPassengers(parseInt(e.target.value, 10))}
-                      className="w-full accent-white cursor-pointer"
-                    />
-                    <span className="w-16 text-center py-1.5 px-2 rounded-lg bg-[#0D2B24] border border-white/15 text-xs font-bold text-[#DFCA95]">
-                      {passengers} pax
-                    </span>
-                  </div>
+              {/* Passengers Selector */}
+              <div>
+                <label className="block text-xs font-semibold text-slate-300 mb-1.5 flex items-center gap-1.5">
+                  <Users className="w-3.5 h-3.5 text-[#DFCA95]" />
+                  Quantidade de Passageiros
+                </label>
+                <div className="flex items-center gap-3 bg-[#0D2B24]/90 border border-white/15 rounded-xl px-4 py-2.5">
+                  <input
+                    type="range"
+                    min="1"
+                    max="15"
+                    value={passengers}
+                    onChange={(e) => setPassengers(parseInt(e.target.value, 10))}
+                    className="w-full accent-white cursor-pointer"
+                  />
+                  <span className="w-20 text-center py-1 px-2.5 rounded-lg bg-[#143D34] border border-white/20 text-xs font-bold text-[#DFCA95]">
+                    {passengers} {passengers === 1 ? 'pessoa' : 'pessoas'}
+                  </span>
                 </div>
               </div>
 
@@ -297,10 +262,8 @@ export const BookingCalculator: React.FC<BookingCalculatorProps> = ({ onOpenBook
 
                 <div className="space-y-3 text-xs text-slate-300">
                   <div className="flex justify-between py-1 border-b border-white/5">
-                    <span className="text-slate-400">Modalidade:</span>
-                    <strong className="text-white">
-                      {serviceClass === 'privativo' ? 'Privativo VIP' : 'Regular Compartilhado'}
-                    </strong>
+                    <span className="text-slate-400">Atendimento:</span>
+                    <strong className="text-emerald-400">Privativo Exclusivo</strong>
                   </div>
 
                   <div className="flex justify-between py-1 border-b border-white/5">

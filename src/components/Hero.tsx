@@ -8,14 +8,13 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal }) => {
   const [routeType, setRouteType] = useState('Transfer Aeroporto POA ⇄ Gramado');
-  const [modality, setModality] = useState<'privativo' | 'regular'>('privativo');
   const [passengers, setPassengers] = useState('2');
   const [tripDate, setTripDate] = useState('');
 
   const handleQuickQuote = (e: React.FormEvent) => {
     e.preventDefault();
     onOpenBookingModal(routeType, {
-      modality,
+      modality: 'privativo',
       passengers: parseInt(passengers, 10) || 2,
       date: tripDate,
     });
@@ -164,37 +163,6 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal }) => {
                     <option value="Tour Vale dos Vinhedos + Maria Fumaça">Tour Uva e Vinho + Maria Fumaça</option>
                     <option value="Motorista Particular Diária VIP">Motorista Particular / Diária VIP</option>
                   </select>
-                </div>
-
-                {/* Modality Toggle */}
-                <div>
-                  <label className="block text-xs font-semibold text-slate-300 mb-1">
-                    Tipo de Atendimento
-                  </label>
-                  <div className="grid grid-cols-2 gap-2">
-                    <button
-                      type="button"
-                      onClick={() => setModality('privativo')}
-                      className={`py-2 px-3 rounded-lg text-xs font-semibold border transition-all ${
-                        modality === 'privativo'
-                          ? 'bg-white text-[#143D34] border-white shadow-md'
-                          : 'bg-[#143D34]/80 text-slate-300 border-white/10 hover:border-white/25'
-                      }`}
-                    >
-                      Privativo VIP
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => setModality('regular')}
-                      className={`py-2 px-3 rounded-lg text-xs font-semibold border transition-all ${
-                        modality === 'regular'
-                          ? 'bg-white text-[#143D34] border-white shadow-md'
-                          : 'bg-[#143D34]/80 text-slate-300 border-white/10 hover:border-white/25'
-                      }`}
-                    >
-                      Regular Compartilhado
-                    </button>
-                  </div>
                 </div>
 
                 {/* Date & Passengers Grid */}
