@@ -16,7 +16,7 @@ export const TestimonialsSection: React.FC = () => {
             A Opinião de Quem Já <span className="italic text-[#143D34]">Viajou Conosco</span>
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-600 font-light">
-            Mais de 15.000 passageiros transportados com segurança, conforto e pontualidade desde 2018.
+            Mais de 5.000 turistas atendidos com segurança, conforto e pontualidade desde 2018.
           </p>
         </div>
 

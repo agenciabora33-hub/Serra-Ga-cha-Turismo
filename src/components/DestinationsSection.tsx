@@ -43,6 +43,7 @@ export const DestinationsSection: React.FC<DestinationsSectionProps> = ({ onOpen
                 alt={loc.title}
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 loading="lazy"
+                referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0D2B24] via-[#0D2B24]/70 to-transparent"></div>
 

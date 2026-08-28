@@ -118,7 +118,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal }) => {
                   <span className="font-bold text-white ml-1">4.9 / 5.0</span>
                 </div>
                 <p className="text-slate-300/80 text-[11px]">
-                  Mais de 15.000 turistas atendidos com nota máxima na Serra Gaúcha
+                  Mais de 5.000 turistas atendidos com nota máxima na Serra Gaúcha
                 </p>
               </div>
             </div>

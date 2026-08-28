@@ -1,5 +1,12 @@
 import { ServiceItem, FleetVehicle, TestimonialItem, FaqItem } from '../types';
-import chauffeurAirportImg from '../assets/images/chauffeur_airport_transfer_1787867421419.jpg';
+import aeroportoPoaImg from '../assets/images/transfer_aeroporto_poa_g1.jpg';
+import porticoGramadoImg from '../assets/images/portico_gramado_entry_1787921345244.jpg';
+import catedralPedraImg from '../assets/images/catedral_pedra_canela_1787921594929.jpg';
+import labirintoVerdeImg from '../assets/images/labirinto_verde_novapetropolis.jpg';
+import comprasGastronomiaImg from '../assets/images/compras_gastronomia_gramado_1787922063620.jpg';
+import floresJardimImg from '../assets/images/flores_jardim_gramado_1787922745724.jpg';
+import motoristaVipImg from '../assets/images/transfer_particular_luxo_aeroporto_1787923586899.jpg';
+import motoristaPlacaImg from '../assets/images/motorista_placa_aeroporto_1787923819454.jpg';
 
 export const COMPANY_INFO = {
   name: 'Serra Gaúcha Turismo',
@@ -42,27 +49,29 @@ export const SERVICES_LIST: ServiceItem[] = [
     ],
     vehicleTypes: ['Sedan Executivo', 'SUV Premium', 'Van Executiva Mercedes/Master'],
     priceInfo: 'Sob consulta com desconto exclusivo',
-    imageUrl: chauffeurAirportImg,
+    imageUrl: motoristaPlacaImg,
     featured: true,
   },
   {
-    id: 'transfer-aeroporto-regular',
-    title: 'Transfer Aeroporto POA ⇄ Gramado / Canela (Regular Compartilhado)',
-    category: 'transfer',
-    badge: 'Melhor Custo-Benefício',
-    shortDesc: 'Opção inteligente e econômica com saídas programadas de vans executivas com ar-condicionado e total segurança.',
-    fullDesc: 'Viagem compartilhada em veículos confortáveis de alta capacidade. Ideal para viajantes individuais ou casais que desejam a segurança de um transporte credenciado com tarifas acessíveis.',
-    route: 'Aeroporto Internacional de Porto Alegre ⇄ Hotéis e Pousadas Centrais',
-    duration: 'Aprox. 2h15 a 2h30',
+    id: 'assessoria-compras-gastronomia',
+    title: 'Assessoria & Roteiro VIP: Compras, Fábricas & Alta Gastronomia',
+    category: 'vip',
+    badge: 'Concierge VIP',
+    shortDesc: 'Acompanhamento exclusivo aos melhores locais de compras (fábricas de couro, malharias, chocolates e cristais) e restaurantes premiados.',
+    fullDesc: 'Experiência sob medida com motorista executivo e assessoria personalizada. Conheça as melhores fábricas de couro e malhas com descontos de fábrica, lojas de cristais nobres, chocolaterias artesanais e tenha recomendações nos mais conceituados restaurantes de fondue, parrillas e alta gastronomia.',
+    route: 'Boutiques de Couro, Malharias, Chocolatarias & Restaurantes Selecionados',
+    duration: 'Personalizado (4h a 8h)',
     highlights: [
-      'Coordenação no saguão de desembarque',
-      'Veículos modernos com climatização e poltronas reclináveis',
-      'Seguro passageiro total incluso',
-      'Desembarque no hotel reservado em Gramado/Canela',
+      'Dicas e acesso direto a lojas de fábrica (couros nobres, calçados e malhas)',
+      'Degustações nas melhores chocolaterias artesanais e adegas da serra',
+      'Acompanhamento e suporte no transporte e acomodação de todas as suas compras',
+      'Recomendações e reservas nos melhores restaurantes, bistrôs e sequências de fondue',
+      'Veículo executivo climatizado e motorista à disposição durante todo o roteiro',
     ],
-    vehicleTypes: ['Van Executiva', 'Micro-ônibus Luxo'],
-    priceInfo: 'Tarifa individual por trecho',
-    imageUrl: 'https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=1200&q=80',
+    vehicleTypes: ['Sedan Executivo', 'SUV Premium', 'Van Executiva Mercedes/Master'],
+    priceInfo: 'Sob consulta com roteiro personalizado',
+    imageUrl: comprasGastronomiaImg,
+    featured: true,
   },
   {
     id: 'city-tour-gramado-canela',
@@ -81,7 +90,7 @@ export const SERVICES_LIST: ServiceItem[] = [
     ],
     vehicleTypes: ['SUV Premium', 'Van Executiva', 'Spin Especial'],
     priceInfo: 'Opções privativas ou por pessoa',
-    imageUrl: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: floresJardimImg,
     featured: true,
   },
   {
@@ -120,7 +129,7 @@ export const SERVICES_LIST: ServiceItem[] = [
     ],
     vehicleTypes: ['Sedan Executivo', 'SUV Premium 4x4', 'Van VIP'],
     priceInfo: 'Diárias personalizadas',
-    imageUrl: 'https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: motoristaVipImg,
   },
   {
     id: 'venda-ingressos-parques',
@@ -144,42 +153,6 @@ export const SERVICES_LIST: ServiceItem[] = [
 ];
 
 export const FLEET_VEHICLES: FleetVehicle[] = [
-  {
-    id: 'van-sprinter-master',
-    name: 'Van Executiva de Luxo (Mercedes-Benz Sprinter / Renault Master)',
-    category: 'Grupos e Famílias',
-    capacity: 'Até 15 ou 19 passageiros',
-    luggageCapacity: 'Até 18 malas grandes + bagagem de mão',
-    comfortFeatures: [
-      'Bancos individuais reclináveis em couro soft',
-      'Ar-condicionado digital de alta potência com saídas individuais',
-      'Wi-Fi 4G/5G de alta velocidade a bordo',
-      'Tomadas USB individuais para recarga de smartphones',
-      'Isolamento acústico premium para viagem silenciosa',
-      'Amplo bagageiro traseiro com fácil acesso',
-    ],
-    idealFor: 'Famílias grandes, grupos de amigos, delegações corporativas e casamentos.',
-    imageUrl: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1000&q=80',
-    badge: 'Máximo Espaço',
-  },
-  {
-    id: 'suv-premium',
-    name: 'SUV Premium 4x4 (Jeep Commander / Compass / Equinox)',
-    category: 'Casais e Famílias Exclusivas',
-    capacity: 'Até 4 passageiros com total folga',
-    luggageCapacity: 'Até 4 malas médias/grandes',
-    comfortFeatures: [
-      'Interior refinado em couro com acabamento premium',
-      'Ar-condicionado dual zone independente',
-      'Tração e estabilidade aprimorada para curvas da serra e chuva',
-      'Carregamento wireless / USB',
-      'Vidros com película de proteção e privacidade',
-      'Água mineral gelada à disposição',
-    ],
-    idealFor: 'Casais em lua de mel, executivos e famílias que buscam privacidade e estilo.',
-    imageUrl: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1000&q=80',
-    badge: 'Mais Confortável',
-  },
   {
     id: 'sedan-executivo',
     name: 'Sedan Executivo (Toyota Corolla / Honda Civic)',
@@ -330,13 +303,13 @@ export const SCENIC_LOCATIONS = [
   {
     title: 'Gramado',
     subtitle: 'O charme europeu no Brasil',
-    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80',
+    image: porticoGramadoImg,
     tags: ['Lago Negro', 'Rua Coberta', 'Mini Mundo', 'Gastronomia'],
   },
   {
     title: 'Canela',
     subtitle: 'Natureza exuberante & monumentos',
-    image: 'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80',
+    image: catedralPedraImg,
     tags: ['Catedral de Pedra', 'Cascata do Caracol', 'Skyglass', 'Parques'],
   },
   {
@@ -348,7 +321,7 @@ export const SCENIC_LOCATIONS = [
   {
     title: 'Nova Petrópolis & Três Coroas',
     subtitle: 'Cultura alemã, templos e aventura',
-    image: 'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=800&q=80',
+    image: labirintoVerdeImg,
     tags: ['Labirinto Verde', 'Templo Budista', 'Rafting', 'Compras Malhas'],
   },
 ];

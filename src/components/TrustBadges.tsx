@@ -12,7 +12,7 @@ export const TrustBadges: React.FC = () => {
     },
     {
       icon: Users,
-      value: '15.000+',
+      value: '+5.000',
       label: 'Turistas Atendidos',
       sublabel: 'Casais, famílias e corporativo',
     },

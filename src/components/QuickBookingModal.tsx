@@ -96,7 +96,7 @@ export const QuickBookingModal: React.FC<QuickBookingModalProps> = ({
             >
               <option value="Transfer Aeroporto POA ⇄ Gramado (Privativo)">Transfer Aeroporto POA ⇄ Gramado (Privativo)</option>
               <option value="Transfer Aeroporto POA ⇄ Canela (Privativo)">Transfer Aeroporto POA ⇄ Canela (Privativo)</option>
-              <option value="Transfer Regular Compartilhado POA ⇄ Gramado">Transfer Regular Compartilhado POA ⇄ Gramado</option>
+              <option value="Assessoria & Roteiro VIP: Compras, Fábricas & Alta Gastronomia">Assessoria & Roteiro VIP: Compras, Fábricas & Alta Gastronomia</option>
               <option value="City Tour Gramado & Canela Completo">City Tour Gramado & Canela Completo</option>
               <option value="Tour Uva e Vinho com Maria Fumaça">Tour Uva e Vinho com Maria Fumaça</option>
               <option value="Motorista Particular Diária VIP">Motorista Particular Diária VIP</option>
