@@ -56,7 +56,7 @@ export const FleetSection: React.FC<FleetSectionProps> = ({ onOpenBookingModal }
                 </div>
 
                 {/* Vehicle Image */}
-                <div className="relative h-48 sm:h-56 rounded-xl overflow-hidden mb-6 border border-white/10">
+                <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-6 border border-white/10">
                   <img
                     src={vehicle.imageUrl}
                     alt={vehicle.name}
