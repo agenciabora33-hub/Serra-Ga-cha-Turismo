@@ -145,6 +145,18 @@ export const Footer: React.FC = () => {
             <span>Rua Adão Wilbert, 78 - Centro, Três Coroas - RS, 95660-000</span>
           </p>
         </div>
+
+        {/* Agency Credit Line */}
+        <div className="mt-4 pt-3 border-t border-white/5 text-[11px] text-gray-500">
+          <a
+            href="https://wa.me/5554981164282?text=Ol%C3%A1%21%20Gostaria%20de%20um%20or%C3%A7amento%20para%20um%20site"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-[#DFCA95] transition-colors inline-flex items-center justify-center gap-1"
+          >
+            Site realizado por agência Bora Digital Strategy www.agenciabora.com.br
+          </a>
+        </div>
       </div>
     </footer>
   );

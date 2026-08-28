@@ -7,6 +7,8 @@ import comprasGastronomiaImg from '../assets/images/compras_gastronomia_gramado_
 import floresJardimImg from '../assets/images/flores_jardim_gramado_1787922745724.jpg';
 import motoristaVipImg from '../assets/images/transfer_particular_luxo_aeroporto_1787923586899.jpg';
 import motoristaPlacaImg from '../assets/images/motorista_placa_aeroporto_1787923819454.jpg';
+import frotaGramadoImg from '../assets/images/frota_gramado_portico_1787948949681.jpg';
+import frotaCanelaImg from '../assets/images/frota_canela_catedral_1787948964412.jpg';
 
 export const COMPANY_INFO = {
   name: 'Serra Gaúcha Turismo',
@@ -155,34 +157,35 @@ export const SERVICES_LIST: ServiceItem[] = [
 export const FLEET_VEHICLES: FleetVehicle[] = [
   {
     id: 'sedan-executivo',
-    name: 'Sedan Executivo (Toyota Corolla / Honda Civic)',
+    name: 'Sedan Executivo (Chevrolet Onix Plus)',
     category: 'Casais e Viagens Corporativas',
     capacity: 'Até 3 passageiros confortáveis',
     luggageCapacity: 'Até 3 malas médias',
     comfortFeatures: [
       'Rodagem suave e silenciosa para subida da serra',
-      'Ar-condicionado digital',
+      'Ar-condicionado digital e bancos confortáveis',
       'Cadeirinha infantil disponível sob solicitação',
       'Motorista com traje social e atendimento cortês',
     ],
     idealFor: 'Casais, passageiros corporativos e traslados rápidos com excelente custo.',
-    imageUrl: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: frotaGramadoImg,
     badge: 'Elegância e Agilidade',
   },
   {
     id: 'minivan-spin',
     name: 'Minivan Familiar (Chevrolet Spin 7 Lugares)',
-    category: 'Famílias com Crianças',
+    category: 'Famílias com Crianças e Grupos',
     capacity: 'Até 4 a 6 passageiros',
     luggageCapacity: 'Espaço flexível para malas e carrinhos de bebê',
     comfortFeatures: [
-      'Espaço modulável ideal para carrinhos de bebê e compras',
-      'Ar-condicionado com saídas traseiras',
+      'Espaço modulável ideal para malas, carrinhos e compras',
+      'Ar-condicionado potente para toda a cabine',
       'Cadeirinhas e assentos de elevação higienizados',
-      'Segurança total com seguro passageiro integral',
+      'Segurança total com seguro passageiro integral (APP)',
     ],
-    idealFor: 'Famílias com crianças pequenas e idosos com foco em praticidade e conforto.',
-    imageUrl: 'https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=1000&q=80',
+    idealFor: 'Famílias com crianças pequenas, idosos e grupos com foco em praticidade e conforto.',
+    imageUrl: frotaCanelaImg,
+    badge: 'Espaço e Versatilidade',
   },
 ];
 
