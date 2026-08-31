@@ -158,6 +158,9 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal }) => {
                   >
                     <option value="Transfer Aeroporto POA ⇄ Gramado">Aeroporto Salgado Filho (POA) ⇄ Gramado</option>
                     <option value="Transfer Aeroporto POA ⇄ Canela">Aeroporto Salgado Filho (POA) ⇄ Canela</option>
+                    <option value="Transfer Aeroporto Caxias do Sul (CXJ) ⇄ Gramado/Canela">Aeroporto Caxias do Sul (CXJ) ⇄ Gramado / Canela</option>
+                    <option value="Transfer Florianópolis (SC) ⇄ Gramado/Canela">Florianópolis (SC) ⇄ Gramado / Canela</option>
+                    <option value="Transfer Caxias do Sul ⇄ Gramado/Canela">Caxias do Sul ⇄ Gramado / Canela</option>
                     <option value="Transfer Aeroporto POA ⇄ Nova Petrópolis">Aeroporto Salgado Filho (POA) ⇄ Nova Petrópolis</option>
                     <option value="City Tour Completo Gramado & Canela">City Tour Gramado e Canela</option>
                     <option value="Tour Vale dos Vinhedos + Maria Fumaça">Tour Uva e Vinho + Maria Fumaça</option>

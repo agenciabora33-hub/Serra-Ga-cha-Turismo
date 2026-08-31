@@ -9,6 +9,7 @@ import motoristaVipImg from '../assets/images/transfer_particular_luxo_aeroporto
 import motoristaPlacaImg from '../assets/images/motorista_placa_aeroporto_1787923819454.jpg';
 import frotaGramadoImg from '../assets/images/frota_gramado_portico_1787948949681.jpg';
 import frotaCanelaImg from '../assets/images/frota_canela_catedral_1787948964412.jpg';
+import bondinhosCanelaImg from '../assets/images/bondinhos_canela_caracol_1788188070196.jpg';
 
 export const COMPANY_INFO = {
   name: 'Serra Gaúcha Turismo',
@@ -150,7 +151,7 @@ export const SERVICES_LIST: ServiceItem[] = [
     ],
     vehicleTypes: ['Serviço Integrado'],
     priceInfo: 'Valores oficiais com atendimento VIP',
-    imageUrl: 'https://images.unsplash.com/photo-1513883049090-d0b7439799bf?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: bondinhosCanelaImg,
   },
 ];
 

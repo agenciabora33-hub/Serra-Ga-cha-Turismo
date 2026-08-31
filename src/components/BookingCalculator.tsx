@@ -124,6 +124,9 @@ export const BookingCalculator: React.FC<BookingCalculatorProps> = ({ onOpenBook
                     className="w-full bg-[#0D2B24]/90 border border-white/15 rounded-xl px-3.5 py-2.5 text-xs text-slate-100 focus:outline-none focus:border-white"
                   >
                     <option value="Aeroporto Salgado Filho (POA)">Aeroporto Salgado Filho (POA)</option>
+                    <option value="Aeroporto Hugo Cantergiani (CXJ - Caxias do Sul)">Aeroporto Hugo Cantergiani (CXJ - Caxias do Sul)</option>
+                    <option value="Caxias do Sul (Hotel / Centro)">Caxias do Sul (Hotel / Centro)</option>
+                    <option value="Florianópolis (Aeroporto / Hotel / Ilha)">Florianópolis (Aeroporto / Hotel / Ilha)</option>
                     <option value="Gramado (Hotel / Pousada)">Gramado (Hotel / Pousada / Centro)</option>
                     <option value="Canela (Hotel / Pousada)">Canela (Hotel / Pousada / Centro)</option>
                     <option value="Porto Alegre (Hotel / Bairro)">Porto Alegre (Hotel / Residência)</option>
@@ -145,6 +148,9 @@ export const BookingCalculator: React.FC<BookingCalculatorProps> = ({ onOpenBook
                     <option value="Gramado (Hotel / Pousada)">Gramado (Hotel / Pousada / Centro)</option>
                     <option value="Canela (Hotel / Pousada)">Canela (Hotel / Pousada / Centro)</option>
                     <option value="Aeroporto Salgado Filho (POA)">Aeroporto Salgado Filho (POA)</option>
+                    <option value="Aeroporto Hugo Cantergiani (CXJ - Caxias do Sul)">Aeroporto Hugo Cantergiani (CXJ - Caxias do Sul)</option>
+                    <option value="Caxias do Sul (Hotel / Centro)">Caxias do Sul (Hotel / Centro)</option>
+                    <option value="Florianópolis (Aeroporto / Hotel / Ilha)">Florianópolis (Aeroporto / Hotel / Ilha)</option>
                     <option value="Vale dos Vinhedos / Bento Gonçalves">Vale dos Vinhedos / Bento Gonçalves</option>
                     <option value="Nova Petrópolis">Nova Petrópolis</option>
                   </select>

@@ -31,7 +31,38 @@
   html {
     scroll-behavior: smooth;
     font-family: var(--font-sans);
+    /* Firefox scrollbar styling */
+    scrollbar-width: thin;
+    scrollbar-color: #DFCA95 #091D18;
   }
+
+  section {
+    scroll-margin-top: 80px;
+  }
+}
+
+/* Luxury Custom Scrollbar for Chrome, Safari, Edge */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #091D18;
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #143D34 0%, #338B78 40%, #DFCA95 100%);
+  border-radius: 9999px;
+  border: 2px solid #091D18;
+  box-shadow: inset 0 0 6px rgba(223, 202, 149, 0.4);
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #20594D 0%, #46A893 30%, #FFF6DD 100%);
+  box-shadow: 0 0 10px rgba(223, 202, 149, 0.8);
 }
 
 .font-editorial {

@@ -13,6 +13,7 @@ import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 import { QuickBookingModal } from './components/QuickBookingModal';
+import { LuxuryScrollExperience } from './components/LuxuryScrollExperience';
 
 export default function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -66,6 +67,9 @@ export default function App() {
 
       {/* Footer */}
       <Footer />
+
+      {/* Interactive Luxury Scroll Progress, Floating Section Spy & Scroll-to-Top */}
+      <LuxuryScrollExperience />
 
       {/* Floating Instant WhatsApp Concierge Button */}
       <FloatingWhatsApp />
