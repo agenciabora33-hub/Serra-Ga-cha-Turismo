@@ -23,6 +23,22 @@ export const Footer: React.FC = () => {
               <ShieldCheck className="w-4 h-4" />
               <span>Agência Credenciada Cadastur • Frota 100% Própria</span>
             </div>
+
+            <div className="pt-2">
+              <a
+                href="https://profile.google.com/@example"
+                aria-label="Find us on Google Search"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block transition-transform duration-200 hover:scale-105"
+              >
+                <img
+                  src="/path/to/google-search-badge.svg"
+                  alt="Google Search"
+                  className="h-10 w-auto"
+                />
+              </a>
+            </div>
           </div>
 
           {/* Col 2: Fast Anchor Links (3 cols) */}

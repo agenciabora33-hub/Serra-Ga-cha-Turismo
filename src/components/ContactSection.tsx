@@ -172,6 +172,30 @@ export const ContactSection: React.FC = () => {
                   </span>
                 </a>
 
+                {/* Google Search Profile Badge */}
+                <div className="flex items-center justify-between p-3.5 rounded-xl bg-[#143D34]/70 border border-white/10">
+                  <div className="space-y-0.5">
+                    <span className="text-xs font-semibold text-slate-300 block">
+                      Google Search
+                    </span>
+                    <span className="text-[11px] text-slate-400 block">
+                      Encontre e siga nossa página no buscador
+                    </span>
+                  </div>
+                  <a
+                    href="https://profile.google.com/@example"
+                    aria-label="Find us on Google Search"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block transition-transform duration-200 hover:scale-105 shrink-0"
+                  >
+                    <img
+                      src="/path/to/google-search-badge.svg"
+                      alt="Google Search"
+                      className="h-9 w-auto"
+                    />
+                  </a>
+                </div>
               </div>
 
             </div>
