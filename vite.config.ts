@@ -1,7 +1,7 @@
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
-import {defineConfig} from 'vite';
+import { defineConfig } from 'vite';
 
 export default defineConfig(() => {
   return {
@@ -11,11 +11,22 @@ export default defineConfig(() => {
         '@': path.resolve(__dirname, '.'),
       },
     },
+    build: {
+      rollupOptions: {
+        input: {
+          main: path.resolve(__dirname, 'index.html'),
+          transferAeroporto: path.resolve(__dirname, 'transfer-aeroporto-porto-alegre-gramado.html'),
+          cityTour: path.resolve(__dirname, 'city-tour-gramado-canela.html'),
+          tourUvaVinho: path.resolve(__dirname, 'tour-uva-e-vinho-maria-fumaca.html'),
+          roteiroCompras: path.resolve(__dirname, 'roteiro-compras-gastronomia-gramado.html'),
+          motoristaParticular: path.resolve(__dirname, 'motorista-particular-gramado.html'),
+          ingressosParques: path.resolve(__dirname, 'ingressos-parques-gramado-canela.html'),
+        },
+      },
+    },
     server: {
       // HMR is disabled in AI Studio via DISABLE_HMR env var.
-      // Do not modifyâfile watching is disabled to prevent flickering during agent edits.
       hmr: process.env.DISABLE_HMR !== 'true',
-      // Disable file watching when DISABLE_HMR is true to save CPU during agent edits.
       watch: process.env.DISABLE_HMR === 'true' ? null : {},
     },
   };

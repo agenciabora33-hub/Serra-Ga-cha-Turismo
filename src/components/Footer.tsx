@@ -3,7 +3,12 @@ import { ShieldCheck, Heart, MapPin, Phone, MessageSquare, Instagram, Clock, Cre
 import { COMPANY_INFO } from '../data/mockData';
 import { BrandLogo } from './BrandLogo';
 
-export const Footer: React.FC = () => {
+interface FooterProps {
+  onNavigateService?: (slug: string) => void;
+  onNavigateHome?: () => void;
+}
+
+export const Footer: React.FC<FooterProps> = ({ onNavigateService, onNavigateHome }) => {
   return (
     <footer className="bg-[#0D2B24] border-t border-white/10 text-gray-400 text-xs sm:text-sm">
       
@@ -91,13 +96,97 @@ export const Footer: React.FC = () => {
             <h4 className="font-serif text-sm font-bold text-white uppercase tracking-wider">
               Especialidades
             </h4>
-            <ul className="space-y-2 text-xs text-gray-400">
-              <li>• Traslado Aeroporto de Porto Alegre</li>
-              <li>• Transfer Privativo Gramado e Canela</li>
-              <li>• City Tour Completo Gramado & Canela</li>
-              <li>• Tour Uva e Vinho + Maria Fumaça</li>
-              <li>• Roteiros Personalizados com Motorista VIP</li>
-              <li>• Assessoria e Ingressos para Parques</li>
+            <ul className="space-y-2 text-xs text-gray-300">
+              <li>
+                <a
+                  href="/transfer-aeroporto-porto-alegre-gramado"
+                  onClick={(e) => {
+                    if (onNavigateService) {
+                      e.preventDefault();
+                      onNavigateService('transfer-aeroporto-porto-alegre-gramado');
+                    }
+                  }}
+                  className="hover:text-[#DFCA95] transition-colors flex items-center gap-1.5"
+                >
+                  <ChevronRight className="w-3.5 h-3.5 text-[#DFCA95] shrink-0" />
+                  <span>Transfer Aeroporto POA ⇄ Gramado</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/city-tour-gramado-canela"
+                  onClick={(e) => {
+                    if (onNavigateService) {
+                      e.preventDefault();
+                      onNavigateService('city-tour-gramado-canela');
+                    }
+                  }}
+                  className="hover:text-[#DFCA95] transition-colors flex items-center gap-1.5"
+                >
+                  <ChevronRight className="w-3.5 h-3.5 text-[#DFCA95] shrink-0" />
+                  <span>City Tour Completo Gramado & Canela</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/tour-uva-e-vinho-maria-fumaca"
+                  onClick={(e) => {
+                    if (onNavigateService) {
+                      e.preventDefault();
+                      onNavigateService('tour-uva-e-vinho-maria-fumaca');
+                    }
+                  }}
+                  className="hover:text-[#DFCA95] transition-colors flex items-center gap-1.5"
+                >
+                  <ChevronRight className="w-3.5 h-3.5 text-[#DFCA95] shrink-0" />
+                  <span>Tour Uva e Vinho + Maria Fumaça</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/roteiro-compras-gastronomia-gramado"
+                  onClick={(e) => {
+                    if (onNavigateService) {
+                      e.preventDefault();
+                      onNavigateService('roteiro-compras-gastronomia-gramado');
+                    }
+                  }}
+                  className="hover:text-[#DFCA95] transition-colors flex items-center gap-1.5"
+                >
+                  <ChevronRight className="w-3.5 h-3.5 text-[#DFCA95] shrink-0" />
+                  <span>Roteiro Compras & Alta Gastronomia</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/motorista-particular-gramado"
+                  onClick={(e) => {
+                    if (onNavigateService) {
+                      e.preventDefault();
+                      onNavigateService('motorista-particular-gramado');
+                    }
+                  }}
+                  className="hover:text-[#DFCA95] transition-colors flex items-center gap-1.5"
+                >
+                  <ChevronRight className="w-3.5 h-3.5 text-[#DFCA95] shrink-0" />
+                  <span>Motorista Particular VIP à Disposição</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/ingressos-parques-gramado-canela"
+                  onClick={(e) => {
+                    if (onNavigateService) {
+                      e.preventDefault();
+                      onNavigateService('ingressos-parques-gramado-canela');
+                    }
+                  }}
+                  className="hover:text-[#DFCA95] transition-colors flex items-center gap-1.5"
+                >
+                  <ChevronRight className="w-3.5 h-3.5 text-[#DFCA95] shrink-0" />
+                  <span>Assessoria & Ingressos para Parques</span>
+                </a>
+              </li>
             </ul>
 
             <div className="pt-2">

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { TrustBadges } from './components/TrustBadges';
@@ -16,11 +16,70 @@ import { QuickBookingModal } from './components/QuickBookingModal';
 import { LuxuryScrollExperience } from './components/LuxuryScrollExperience';
 import { ScrollReveal } from './components/ScrollReveal';
 import { SectionTransition } from './components/SectionTransition';
+import { ServicePage } from './components/ServicePage';
+import { DETAILED_SERVICES } from './data/servicesData';
 
 export default function App() {
+  const [currentPath, setCurrentPath] = useState<string>(() => window.location.pathname);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalService, setModalService] = useState<string | undefined>(undefined);
   const [modalDetails, setModalDetails] = useState<any>(undefined);
+
+  // Parse service slug if any
+  const getServiceSlugFromPath = (path: string): string | null => {
+    const clean = path.replace(/^\/+|\/+$/g, '').replace(/\.html$/, '');
+    return DETAILED_SERVICES[clean] ? clean : null;
+  };
+
+  const activeServiceSlug = getServiceSlugFromPath(currentPath);
+
+  // Listen to browser popstate (back/forward)
+  useEffect(() => {
+    const handlePopState = () => {
+      setCurrentPath(window.location.pathname);
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
+  // Restore homepage meta tags if on homepage
+  useEffect(() => {
+    if (!activeServiceSlug) {
+      document.title = 'Serra Gaúcha Turismo | Transfer Porto Alegre Gramado';
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) {
+        metaDesc.setAttribute(
+          'content',
+          'Transfer Aeroporto Porto Alegre para Gramado e Canela. Serviços privativos e regulares, passeios exclusivos e atendimento VIP na Serra Gaúcha.'
+        );
+      }
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      if (ogTitle) {
+        ogTitle.setAttribute('content', 'Serra Gaúcha Turismo | Transfer Porto Alegre Gramado');
+      }
+      const ogDesc = document.querySelector('meta[property="og:description"]');
+      if (ogDesc) {
+        ogDesc.setAttribute(
+          'content',
+          'Transfer Aeroporto Porto Alegre para Gramado e Canela. Serviços privativos e regulares, passeios exclusivos e atendimento VIP na Serra Gaúcha.'
+        );
+      }
+      const ogUrl = document.querySelector('meta[property="og:url"]');
+      if (ogUrl) {
+        ogUrl.setAttribute('content', 'https://serragauchaturismo.vercel.app/');
+      }
+      const canonical = document.querySelector('link[rel="canonical"]');
+      if (canonical) {
+        canonical.setAttribute('href', 'https://serragauchaturismo.vercel.app/');
+      }
+    }
+  }, [activeServiceSlug]);
+
+  const navigateTo = (path: string) => {
+    window.history.pushState({}, '', path);
+    setCurrentPath(path);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   const handleOpenModal = (serviceName?: string, details?: any) => {
     setModalService(serviceName || 'Transfer Aeroporto POA ⇄ Gramado (Privativo)');
@@ -32,6 +91,38 @@ export default function App() {
     setIsModalOpen(false);
   };
 
+  // If visiting a dedicated service URL, render the dedicated SEO/AEO/SXO page
+  if (activeServiceSlug) {
+    return (
+      <div className="min-h-screen bg-[#F8F9FA] text-[#333333] font-sans overflow-x-hidden">
+        <ServicePage
+          slug={activeServiceSlug}
+          onOpenBookingModal={handleOpenModal}
+          onNavigateHome={() => navigateTo('/')}
+          onNavigateService={(targetSlug) => navigateTo(`/${targetSlug}`)}
+        />
+
+        {/* Footer with deep internal links */}
+        <Footer
+          onNavigateHome={() => navigateTo('/')}
+          onNavigateService={(targetSlug) => navigateTo(`/${targetSlug}`)}
+        />
+
+        {/* Floating Concierge WhatsApp */}
+        <FloatingWhatsApp />
+
+        {/* Quick Booking Modal */}
+        <QuickBookingModal
+          isOpen={isModalOpen}
+          onClose={handleCloseModal}
+          initialService={modalService}
+          initialDetails={modalDetails}
+        />
+      </div>
+    );
+  }
+
+  // Home Page Experience
   return (
     <div className="min-h-screen bg-[#143D34] text-gray-100 font-sans selection:bg-[#DFCA95] selection:text-[#143D34] overflow-x-hidden">
       {/* Navigation */}
@@ -68,7 +159,10 @@ export default function App() {
 
       {/* Services Showcase (Transfers, City Tours, Wine Tours, Tickets) */}
       <ScrollReveal delay={0.1} distance={30} duration={0.85}>
-        <ServicesSection onOpenBookingModal={handleOpenModal} />
+        <ServicesSection
+          onOpenBookingModal={handleOpenModal}
+          onNavigateService={(slug) => navigateTo(`/${slug}`)}
+        />
       </ScrollReveal>
 
       {/* Transition: Services -> Fleet Section */}
@@ -149,8 +243,11 @@ export default function App() {
         <ContactSection />
       </ScrollReveal>
 
-      {/* Footer */}
-      <Footer />
+      {/* Footer with deep internal links to all 6 service pages */}
+      <Footer
+        onNavigateHome={() => navigateTo('/')}
+        onNavigateService={(slug) => navigateTo(`/${slug}`)}
+      />
 
       {/* Interactive Luxury Scroll Progress, Floating Section Spy & Scroll-to-Top */}
       <LuxuryScrollExperience />
@@ -168,4 +265,3 @@ export default function App() {
     </div>
   );
 }
-

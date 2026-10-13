@@ -3,11 +3,21 @@ import { SERVICES_LIST } from '../data/mockData';
 import { ServiceItem } from '../types';
 import { Shield, Clock, MapPin, CheckCircle, ArrowRight, Car, Sparkles, Filter, Users } from 'lucide-react';
 
+const SERVICE_ID_TO_SLUG: Record<string, string> = {
+  'transfer-aeroporto-privativo': 'transfer-aeroporto-porto-alegre-gramado',
+  'assessoria-compras-gastronomia': 'roteiro-compras-gastronomia-gramado',
+  'city-tour-gramado-canela': 'city-tour-gramado-canela',
+  'tour-uva-e-vinho': 'tour-uva-e-vinho-maria-fumaca',
+  'roteiro-personalizado-motorista': 'motorista-particular-gramado',
+  'venda-ingressos-parques': 'ingressos-parques-gramado-canela',
+};
+
 interface ServicesSectionProps {
   onOpenBookingModal: (serviceTitle: string) => void;
+  onNavigateService?: (slug: string) => void;
 }
 
-export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenBookingModal }) => {
+export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenBookingModal, onNavigateService }) => {
   const [activeCategory, setActiveCategory] = useState<'all' | 'transfer' | 'tour' | 'vip'>('all');
 
   const filteredServices = activeCategory === 'all'
@@ -60,11 +70,13 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenBookingM
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredServices.map((service: ServiceItem) => (
-            <div
-              key={service.id}
-              className="group p-6 border border-slate-200 bg-white rounded-2xl hover:border-[#143D34]/40 transition-all flex flex-col justify-between shadow-sm hover:shadow-xl duration-300"
-            >
+          {filteredServices.map((service: ServiceItem) => {
+            const slug = SERVICE_ID_TO_SLUG[service.id] || 'transfer-aeroporto-porto-alegre-gramado';
+            return (
+              <div
+                key={service.id}
+                className="group p-6 border border-slate-200 bg-white rounded-2xl hover:border-[#143D34]/40 transition-all flex flex-col justify-between shadow-sm hover:shadow-xl duration-300"
+              >
               {/* Card Image Banner */}
               <div className="relative h-52 -mx-6 -mt-6 mb-6 rounded-t-2xl overflow-hidden">
                 <img
@@ -125,29 +137,35 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenBookingM
                   </div>
                 </div>
 
-                {/* Card Footer with CTA */}
-                <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between gap-3">
-                  <div className="flex flex-col">
-                    <span className="text-[10px] text-slate-400 uppercase font-semibold">
-                      Orçamento
-                    </span>
-                    <span className="text-xs font-bold text-[#143D34]">
-                      Sob Medida & Transparente
-                    </span>
+                {/* Card Footer with CTA & Service Page Link */}
+                <div className="mt-6 pt-4 border-t border-slate-100 flex flex-col gap-3">
+                  <div className="flex items-center justify-between gap-3">
+                    <a
+                      href={`/${slug}`}
+                      onClick={(e) => {
+                        if (onNavigateService) {
+                          e.preventDefault();
+                          onNavigateService(slug);
+                        }
+                      }}
+                      className="text-xs font-semibold text-[#143D34] hover:text-[#0D2B24] flex items-center gap-1 group/link underline-offset-4 hover:underline"
+                    >
+                      <span>Ver Guia & Detalhes</span>
+                      <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover/link:translate-x-1" />
+                    </a>
+
+                    <button
+                      onClick={() => onOpenBookingModal(service.title)}
+                      className="bg-[#143D34] hover:bg-[#0D2B24] text-white px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all shadow-sm active:scale-95"
+                    >
+                      Reservar
+                    </button>
                   </div>
-
-                  <button
-                    onClick={() => onOpenBookingModal(service.title)}
-                    className="text-[#143D34] text-xs font-bold uppercase tracking-widest flex items-center gap-1.5 hover:text-[#0D2B24] group/btn transition-colors"
-                  >
-                    <span>Reservar</span>
-                    <span className="transition-transform group-hover/btn:translate-x-1">→</span>
-                  </button>
                 </div>
-
               </div>
             </div>
-          ))}
+          );
+        })}
         </div>
 
         {/* Bottom Guarantee Strip */}

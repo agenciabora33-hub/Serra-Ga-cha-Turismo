@@ -30,9 +30,42 @@
           "value": "text/plain; charset=utf-8"
         }
       ]
+    },
+    {
+      "source": "/BingSiteAuth.xml",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/xml; charset=utf-8"
+        }
+      ]
     }
   ],
   "rewrites": [
+    {
+      "source": "/transfer-aeroporto-porto-alegre-gramado",
+      "destination": "/transfer-aeroporto-porto-alegre-gramado.html"
+    },
+    {
+      "source": "/city-tour-gramado-canela",
+      "destination": "/city-tour-gramado-canela.html"
+    },
+    {
+      "source": "/tour-uva-e-vinho-maria-fumaca",
+      "destination": "/tour-uva-e-vinho-maria-fumaca.html"
+    },
+    {
+      "source": "/roteiro-compras-gastronomia-gramado",
+      "destination": "/roteiro-compras-gastronomia-gramado.html"
+    },
+    {
+      "source": "/motorista-particular-gramado",
+      "destination": "/motorista-particular-gramado.html"
+    },
+    {
+      "source": "/ingressos-parques-gramado-canela",
+      "destination": "/ingressos-parques-gramado-canela.html"
+    },
     {
       "source": "/((?!assets/|path/|favicon|.*\\..*).*)",
       "destination": "/index.html"
