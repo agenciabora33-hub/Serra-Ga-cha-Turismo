@@ -1,0 +1,6 @@
+# Robots.txt para Serra Gaúcha Turismo
+User-agent: *
+Allow: /
+
+# Sitemap oficial submetido ao Google Search Console
+Sitemap: https://serragauchaturismo.vercel.app/sitemap.xml
