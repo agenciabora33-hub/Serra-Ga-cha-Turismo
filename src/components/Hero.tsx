@@ -42,9 +42,9 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal }) => {
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif text-white leading-tight" style={{ fontFamily: 'Georgia, serif' }}>
-              Transfer Porto Alegre <br/>
-              <span className="italic text-[#DFCA95]">Gramado & Canela</span>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-serif text-white leading-tight" style={{ fontFamily: 'Georgia, serif' }}>
+              Serra Gaúcha Turismo <span className="text-[#DFCA95] font-light">|</span> <br/>
+              <span className="italic text-[#DFCA95]">Transfer para Gramado e Canela</span>
             </h1>
 
             {/* Subheadline with Local SEO */}
