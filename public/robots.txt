@@ -1,5 +1,5 @@
 # Robots.txt para Serra Gaúcha Turismo
-# Compatível com Google Search Console, Bing Webmaster Tools e demais buscadores
+# Compatível com Google Search Console, Bing Webmaster Tools e buscadores
 
 User-agent: *
 Allow: /
@@ -10,5 +10,6 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-# Sitemap oficial indexável por Google e Bing
+# Sitemaps oficiais indexáveis
 Sitemap: https://serragauchaturismo.vercel.app/sitemap.xml
+Sitemap: https://serragauchaturismo.vercel.app/sitemap_index.xml

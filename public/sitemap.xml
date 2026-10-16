@@ -1,60 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Página Inicial -->
   <url>
     <loc>https://serragauchaturismo.vercel.app/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Página 1: Transfer Aeroporto Porto Alegre para Gramado -->
+  <!-- Transfer Aeroporto Porto Alegre para Gramado -->
   <url>
     <loc>https://serragauchaturismo.vercel.app/transfer-aeroporto-porto-alegre-gramado</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Página 2: City Tour Gramado e Canela -->
+  <!-- City Tour Gramado e Canela -->
   <url>
     <loc>https://serragauchaturismo.vercel.app/city-tour-gramado-canela</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Página 3: Tour Uva e Vinho com Trem Maria Fumaça -->
+  <!-- Tour Uva e Vinho com Maria Fumaça -->
   <url>
     <loc>https://serragauchaturismo.vercel.app/tour-uva-e-vinho-maria-fumaca</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Página 4: Roteiro Compras e Alta Gastronomia -->
+  <!-- Roteiro Compras e Gastronomia -->
   <url>
     <loc>https://serragauchaturismo.vercel.app/roteiro-compras-gastronomia-gramado</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Página 5: Motorista Particular VIP em Gramado -->
+  <!-- Motorista Particular VIP -->
   <url>
     <loc>https://serragauchaturismo.vercel.app/motorista-particular-gramado</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Página 6: Assessoria & Ingressos para Parques -->
+  <!-- Ingressos Parques Gramado e Canela -->
   <url>
     <loc>https://serragauchaturismo.vercel.app/ingressos-parques-gramado-canela</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
